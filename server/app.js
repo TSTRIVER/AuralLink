@@ -18,9 +18,5 @@ app.use(cors(corsOption));
 app.use(express.json({ limit: "8mb" }));
 app.use("/storage", express.static("storage"));
 
-app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
-
 app.use("/api", OTPRouter);
 app.use("/api", RoomsRouter);
