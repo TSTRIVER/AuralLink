@@ -20,7 +20,7 @@ mongoose.connect('mongodb+srv://mohammadtaahawebservices:gGETnjpXTTA8JDBr@aurall
 
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONT_URL,
+    origin: "https://charming-madeleine-d8ad57.netlify.app",
     methods: ["GET", "POST"],
   },
 });
