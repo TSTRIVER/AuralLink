@@ -11,7 +11,7 @@ app.use(cookieParser());
 
 const corsOption = {
   credentials: true,
-  origin: ["*"],
+  origin: ["https://charming-madeleine-d8ad57.netlify.app"],
 };
 
 app.use(cors(corsOption));
