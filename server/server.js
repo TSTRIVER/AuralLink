@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config({path: './.env.dev'});
+dotenv.config({ path: "./.env.dev" });
 import { app } from "./app.js";
 import { connectDB } from "./db.js";
 import http from "http";
@@ -11,20 +11,16 @@ const server = http.createServer(app);
 
 const PORT = process.env.PORT || 4000;
 
-//gGETnjpXTTA8JDBr
-//mongodb+srv://mohammadtaahawebservices:gGETnjpXTTA8JDBr@aurallink-cluster.55wqsrs.mongodb.net/?retryWrites=true&w=majority
-
 // connectDB();
 
-mongoose.connect('mongodb+srv://mohammadtaahawebservices:gGETnjpXTTA8JDBr@aurallink-cluster.55wqsrs.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect(process.env.MONGO_CONNECT);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://charming-madeleine-d8ad57.netlify.app",
-    methods: ["GET", "POST"],
+    origin: "aurallinkio.netlify.app",
+    methods: "GET,POST",
   },
 });
-
 
 const socketUserMap = {};
 

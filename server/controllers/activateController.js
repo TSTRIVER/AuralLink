@@ -27,7 +27,11 @@ export const activateUser = async (req, res) => {
       .resize(150, jimp.AUTO)
       .write(path.resolve(__dirname, `../storage/${imagePath}`));
   } catch (err) {
-    console.log(err, "pehle wala block");
+    const jimResp = await jimp.read(buffer);
+    jimResp
+      .resize(150, jimp.AUTO)
+      .write(path.resolve(__dirname, `../storage/${imagePath}`));
+    console.log(jimResp);
     return res.status(500).json({ message: "Could not process the image" });
   }
 

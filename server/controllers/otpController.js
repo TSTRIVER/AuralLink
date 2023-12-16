@@ -33,6 +33,7 @@ export const sendOtp = async (req, res) => {
   }
 
   const generatedOTP = generateOTP();
+  console.log(generatedOTP);
 
   const expires = Date.now() + 1000 * 60 * 2;
   const data =

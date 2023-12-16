@@ -10,8 +10,10 @@ export const app = express();
 app.use(cookieParser());
 
 const corsOption = {
+  origin: 'aurallinkio.netlify.app',
+  methods: 'GET,POST',
   credentials: true,
-  origin: ["https://charming-madeleine-d8ad57.netlify.app"],
+  optionsSuccessStatus: 204,
 };
 
 app.use(cors(corsOption));
