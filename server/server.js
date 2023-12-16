@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_CONNECT);
 
 const io = new Server(server, {
   cors: {
-    origin: "aurallinkio.netlify.app",
+    origin: "https://aurallinkio.netlify.app",
     methods: "GET,POST",
   },
 });

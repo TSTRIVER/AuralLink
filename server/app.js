@@ -10,7 +10,7 @@ export const app = express();
 app.use(cookieParser());
 
 const corsOption = {
-  origin: 'aurallinkio.netlify.app',
+  origin: 'https://aurallinkio.netlify.app',
   methods: 'GET,POST',
   credentials: true,
   optionsSuccessStatus: 204,
