@@ -17,7 +17,7 @@ const Home = () => {
   }
   return (
     <div className={styles.cardWrapper}>
-        <Card title="Welcome to AuralLink Bhai Sareyana!">
+        <Card title="Welcome to AuralLink!">
         <p className={styles.text}>
           We’re working hard to get AuralLink ready for everyone! While we wrap
           up the finishing touches, we’re adding people gradually to make sure
