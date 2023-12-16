@@ -42,7 +42,11 @@ const Navigation = () => {
           <Link to="/">
             <img
               className={styles.avatar}
-              src={user.avatar ? user.avatar : "/images/monkey-avatar.png"}
+              src={
+                user.avatar
+                  ? user.avatar
+                  : "https://png.pngtree.com/background/20230528/original/pngtree-the-avatar-of-a-man-with-headphones-in-front-of-a-picture-image_2772528.jpg?alt=search"
+              }
               alt="avatar"
             />
           </Link>

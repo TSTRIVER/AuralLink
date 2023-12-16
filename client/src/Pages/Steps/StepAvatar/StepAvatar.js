@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Card from ".././../../Components/Shared/Card/Card";
-import Button from ".././../../Components/Shared/Button/Button";
+import Card from "../../../Components/Shared/Card/Card";
+import Button from "../../../Components/Shared/Button/Button";
 import styles from "./StepAvatar.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { setAvatar } from "../../../store/activateSlice";
@@ -33,7 +33,6 @@ const StepAvatar = ({ onNext }) => {
       }
       console.log(data);
     } catch (err) {
-      console.log("Ye wala axios ka panauti block execute hua");
       console.log(err);
     }
   }

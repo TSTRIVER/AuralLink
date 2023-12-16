@@ -46,7 +46,7 @@ const Phone = ({ onNext }) => {
 
   return (
   
-      <Card title="Enter Your Freaking Phone Number">
+      <Card title="Enter Your Phone Number">
       <Toaster />
         <TextInput
           value={phoneNumber}
